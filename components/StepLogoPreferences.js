@@ -1,4 +1,6 @@
 // components/StepLogoPreferences.js
+import Image from "next/image";
+
 export default function StepLogoPreferences({
   formData,
   handleChange,
@@ -11,73 +13,73 @@ export default function StepLogoPreferences({
       value: "combination",
       label: "Combination mark logos",
       explanation: "Combines text and a symbol into one cohesive mark.",
-      img: "https://picsum.photos/200/100?random=1",
+      img: "/combination.jpg",
     },
     {
       value: "wordmark",
       label: "Wordmark logos",
       explanation: "Uses the company name in a unique typeface.",
-      img: "https://picsum.photos/200/100?random=2",
+      img: "/wordmark.jpg",
     },
     {
       value: "lettermark",
       label: "Lettermark logos",
       explanation: "Focuses on initials or letters to represent the brand.",
-      img: "https://picsum.photos/200/100?random=3",
+      img: "/lettermark.webp",
     },
     {
       value: "monogram",
       label: "Monogram logos",
       explanation: "Interlocks letters to create a compact design.",
-      img: "https://picsum.photos/200/100?random=4",
+      img: "/monogram.webp",
     },
     {
       value: "letterform",
       label: "Letterform logos",
       explanation: "Emphasizes a single letter as the primary design element.",
-      img: "https://picsum.photos/200/100?random=5",
+      img: "/letterform.jpg",
     },
     {
       value: "symbol",
       label: "Symbol or pictorial logos",
       explanation: "Uses an icon or symbol to represent the brand.",
-      img: "https://picsum.photos/200/100?random=6",
+      img: "/symbol.jpg",
     },
     {
       value: "abstract",
       label: "Abstract logos",
       explanation: "Uses abstract shapes to create a unique visual identity.",
-      img: "https://picsum.photos/200/100?random=7",
+      img: "/abstract.webp",
     },
     {
       value: "mascot",
       label: "Mascot logos",
       explanation: "Features a character or mascot representing the brand.",
-      img: "https://picsum.photos/200/100?random=8",
+      img: "/mascot.webp",
     },
     {
       value: "emblem",
       label: "Emblem logos",
       explanation: "Encloses text within a shape or badge.",
-      img: "https://picsum.photos/200/100?random=9",
+      img: "/emblem.webp",
     },
     {
       value: "letters-inside-shape",
       label: "Letters inside shape logos",
       explanation: "Integrates letters inside a defined shape.",
-      img: "https://picsum.photos/200/100?random=10",
+      img: "/lettersinside.webp",
     },
     {
       value: "negative-space",
       label: "Negative space logos",
       explanation: "Uses the background space to reveal a hidden symbol.",
-      img: "https://picsum.photos/200/100?random=11",
+      img: "/negativespace.webp",
     },
     {
       value: "other",
       label: "Other",
       explanation: "Specify if you have another idea in mind.",
-      img: "https://picsum.photos/200/100?random=12",
+      img: "/other.webp",
     },
   ];
 
@@ -146,10 +148,12 @@ export default function StepLogoPreferences({
                   className="absolute inset-0 opacity-0 cursor-pointer"
                 />
                 <div className="flex flex-col">
-                  <img
+                  <Image
                     src={option.img}
                     alt={option.label}
-                    className="w-full h-auto object-cover"
+                            className="w-full h-auto object-cover"
+                            width={200}
+                            height={100}
                   />
                   <div className="p-2 text-center">
                     <span className="font-semibold block">{option.label}</span>
