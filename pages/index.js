@@ -7,6 +7,7 @@ import StepLogoPreferences from "../components/StepLogoPreferences";
 import StepWebsiteQuestions from "../components/StepWebsiteQuestions";
 import StepTypography from "../components/StepTypography";
 import StepAdditionalContact from "../components/StepAdditionalContact";
+import Image from "next/image";
 
 /* --- All Steps (some will be skipped depending on user selection) --- */
 const steps = [
@@ -279,20 +280,22 @@ export default function Home() {
       </Head>
 
       {/* Navbar */}
-      <nav className="bg-white shadow-md">
+      <nav className="bg-analogMain shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <a href="https://analog.krd" className="flex items-center">
-              <img
+              <Image
                 className="h-10 w-auto"
-                src="https://via.placeholder.com/150x50?text=Analog+Logo"
+                src="/analog-logo.svg"
                 alt="Analog Logo"
+                width={200}
+                height={40}
               />
             </a>
             <div>
               <a
                 href="https://analog.krd"
-                className="text-analogMain font-medium hover:text-analogAccent"
+                className="text-white font-medium hover:text-analogAccent"
               >
                 Back to Analog
               </a>
